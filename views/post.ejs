@@ -1,0 +1,14 @@
+<%-include("partials/header.ejs")%>
+<h1>Create a Post</h1>
+<form action="/create" method="POST">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Title"><br>
+    
+    <label for="Subtitle">Subtitle</label>
+    <input type="text" id="subTitle" name="subTitle" placeholder="Subtitle"><br>
+    
+    <label for="postPara">Write your post</label>
+    <textarea name="postPara" id="postPara" placeholder="Write something......"></textarea>
+    <input type="submit" value="Post" id="subButton"><br>
+</form>
+<%-include("partials/footer.ejs")%>

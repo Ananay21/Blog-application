@@ -1,0 +1,32 @@
+<%-include("partials/header.ejs")%>
+<%if(locals.postVector.length===0){%>
+    <%-include("homepage.ejs")%>
+<%}
+else {%>
+    <h1 class="home-header">Recent posts : (<%=postVector.length%>) </h1>
+    <ul>
+        <%for(let i=0;i<postVector.length;i++){%>
+            <li>
+                    <div class="flex-container">
+                        <div class="grid-container">
+                            <div class="post-title">
+                                <div class="title-post">
+                                    <%=postVector[i].title%>
+                                </div>
+                                <div class="img-container">
+                                    <a href="/singlePost"><img src="/images/menu.png" alt="menu-image" class="menu-image"></a>
+                                </div>
+                            </div>
+                            <div class="post-subtitle">
+                                <%=postVector[i].subtitle%>
+                            </div>
+                            <div class="post-para">
+                                <%=postVector[i].post%>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+        <%}%>
+    </ul>
+<%}%>
+<%-include("partials/footer.ejs")%>
